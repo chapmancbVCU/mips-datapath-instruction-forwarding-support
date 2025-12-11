@@ -1,0 +1,40 @@
+Mon Nov 16 10:22:28 PM Eastern Standard Time 2009
+Trace back: can't read "winData(1,0,u,tabid)": no such element in array
+    while executing
+"set tabid $winData($id,tabid)"
+    (procedure "::HTE::Editor::checkFileOnDisk" line 8)
+    invoked from within
+"::HTE::Editor::checkFileOnDisk 1,0,u"
+    (command bound to event)
+  2: ::tkerror {can't read "winData(1,0,u,tabid)": no such element in array}
+  1: ::bgerror {can't read "winData(1,0,u,tabid)": no such element in array}
+Mon Nov 16 10:22:28 PM Eastern Standard Time 2009
+Trace back: can't read "winData(1,0,u,tabid)": no such element in array
+    while executing
+"set tabid $winData($id,tabid)"
+    (procedure "::HTE::Editor::checkFileOnDisk" line 8)
+    invoked from within
+"::HTE::Editor::checkFileOnDisk 1,0,u"
+    (command bound to event)
+  2: ::tkerror {can't read "winData(1,0,u,tabid)": no such element in array}
+  1: ::bgerror {can't read "winData(1,0,u,tabid)": no such element in array}
+Mon Nov 16 10:22:29 PM Eastern Standard Time 2009
+Trace back: can't read "winData(1,0,u,tabid)": no such element in array
+    while executing
+"set tabid $winData($id,tabid)"
+    (procedure "::HTE::Editor::checkFileOnDisk" line 8)
+    invoked from within
+"::HTE::Editor::checkFileOnDisk 1,0,u"
+    (command bound to event)
+  2: ::tkerror {can't read "winData(1,0,u,tabid)": no such element in array}
+  1: ::bgerror {can't read "winData(1,0,u,tabid)": no such element in array}
+Mon Nov 16 10:22:53 PM Eastern Standard Time 2009
+Trace back: can't read "winData(1,0,u,tabid)": no such element in array
+    while executing
+"set tabid $winData($id,tabid)"
+    (procedure "::HTE::Editor::checkFileOnDisk" line 8)
+    invoked from within
+"::HTE::Editor::checkFileOnDisk 1,0,u"
+    (command bound to event)
+  2: ::tkerror {can't read "winData(1,0,u,tabid)": no such element in array}
+  1: ::bgerror {can't read "winData(1,0,u,tabid)": no such element in array}

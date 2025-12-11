@@ -1,0 +1,6 @@
+vsim tb
+view -undock wave
+add wave -r /*
+add list -r /*
+radix -hexadecimal
+run 6000 ns

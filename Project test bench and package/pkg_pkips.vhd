@@ -1,0 +1,60 @@
+-- PKG_PKIPS.VHD Version 1.0
+-- EGRE 426 Fall 09 
+LIBRARY IEEE;
+USE work.all;
+USE IEEE.Std_Logic_1164.all; 
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL; 
+PACKAGE pkg_pkips IS
+    SUBTYPE Opcode is STD_LOGIC_vector(5 downto 0);
+    SUBTYPE Func   is STD_LOGIC_vector(5 downto 0);
+    SUBTYPE rsAddr is STD_LOGIC_vector(4 downto 0);
+    SUBTYPE rtAddr is STD_LOGIC_vector(4 downto 0);
+    SUBTYPE rdAddr is STD_LOGIC_vector(4 downto 0);
+    SUBTYPE RegAddr is STD_LOGIC_vector(4 downto 0);
+    SUBTYPE shamt  is STD_LOGIC_vector(4 downto 0);
+    SUBTYPE Addr   is STD_LOGIC_vector(25 downto 0);
+    SUBTYPE nofst  is STD_LOGIC_vector(15 downto 0);
+    CONSTANT WordSize : natural := 32;
+    CONSTANT MemSize : natural := 16#20#; 
+    CONSTANT CS_ADDR: STD_LOGIC_VECTOR(31 downto 0) := X"00400024"; -- Code Start adress
+    CONSTANT DS_ADDR: STD_LOGIC_VECTOR(31 downto 0) := X"10010000"; -- Data Start adress    
+-- Mapping of instructions to opcodes. See Apendix A.
+    CONSTANT Op_lui     :Opcode := B"001111";   -- 0x0f 
+    CONSTANT Op_jal     :Opcode := B"000011";   -- 0x03 
+    CONSTANT Op_lw      :Opcode := B"100011";   -- 0x23          
+    CONSTANT Op_sw      :Opcode := B"101011";   -- 0x2b           
+    CONSTANT Op_beq     :Opcode := B"000100";   -- 0x04            
+    CONSTANT Op_addi    :Opcode := B"001000";   -- 0x08
+    CONSTANT Op_andi    :Opcode := B"001100";   -- 0x0c
+    CONSTANT Op_ori     :Opcode := B"001101";   -- 0x0d
+    CONSTANT Op_xori    :Opcode := B"001110";   -- 0x0e
+    CONSTANT Op_slti    :Opcode := B"001010";   -- 0x0a
+    CONSTANT Op_or      :Opcode := B"000000";   -- 0x00 see func            
+    CONSTANT Op_slt     :Opcode := B"000000";   -- 0x00 see func            
+    CONSTANT Op_j       :Opcode := B"000010";   -- 0x02 
+    CONSTANT Op_jr      :Opcode := B"000000";   -- 0x00 see func
+    CONSTANT Op_R_Type  :Opcode := B"000000";   -- 0x00 use func
+    CONSTANT Op_0x00    :Opcode := B"000000";   -- 0x00 use func
+-- The instructions below have an op code of "000000"
+    CONSTANT Func_add   :Func   := B"100000";   -- 0x20    
+    CONSTANT Func_sub   :Func   := B"110100";   -- 0x34    
+    CONSTANT Func_and   :Func   := B"000100";   -- 0x36
+    CONSTANT Func_or    :Func   := B"010101";   -- 0x25    
+    CONSTANT Func_slt   :Func   := B"011010";   -- 0x42
+    CONSTANT Func_jr    :Func   := B"001000";   -- 0x08
+    CONSTANT Func_xor   :Func   := B"100110";   -- 0x38
+    CONSTANT Func_nor   :Func   := B"100111";   -- 0x39
+END PACKAGE pkg_pkips;
+
+    
+
+
+
+    
+
+
+
+
+
+

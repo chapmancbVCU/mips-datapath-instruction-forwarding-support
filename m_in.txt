@@ -1,0 +1,15 @@
+3c041001  lui  $4, 4097    ;# point $4 to dm start
+2002000a  addi $2, $0, 10  ;# put 10 in $2
+20030001  addi $3, $0, 1   ;# put 1 in $3 
+00623020  add  $6, $3, $2  ;# put 11 in $6
+2042ffff  addi $2, $2, -1  ;# decrement $2
+ac830028  sw   $3, 40($4)  ;# save $3 in memory pointed to by $3
+8c850028  lw   $5, 40($4)  ;# put word just saved in $5
+20a30001  addi $3, $5, 1   ;# increment $3
+1440fffb  bne  $2, $0, -20 ;# delayed branch
+2084fffc  addi $4, $4, -4  ;# decrement memory pointer
+00463020  add  $6, $2, $6  ;# update $6
+ac860028  sw $6, 40($4)    ;# save $6
+08100015  j 0x00400054     ;j       done
+00000000  nop              ;nop
+00000000  nop              ;nop
